@@ -4,7 +4,7 @@ Home Assignment for GoTech
 
 ## Getting Started
 
-To run the program:
+To run the program after cloning the repository, execute the following commands:
 
 ```bash
 npm install
