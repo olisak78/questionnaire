@@ -1,0 +1,56 @@
+{
+  "questionnaires": [
+    {
+      "id": 1,
+      "title": "GoTech Questionnaire",
+      "subtitle": "Show me what you got!",
+      "questions": [
+        {
+          "questionId": 1,
+          "questionText": "What language is your favorite?",
+          "required": true,
+          "questionType": 0,
+          "multipleChoiceAnswers": [
+            { "id": "JavaScript", "title": "JavaScript", "type": 0 },
+            { "id": "TypeScript", "title": "TypeScript", "type": 0 },
+            { "id": "CoffeeScript", "title": "CoffeeScript", "type": 0 }
+          ],
+          "textAnswerPlaceHolder": "",
+          "conditions": {}
+        },
+        {
+          "questionId": 2,
+          "questionText": "Why do you like TypeScript?",
+          "required": false,
+          "questionType": 1,
+          "multipleChoiceAnswers": [],
+          "textAnswerPlaceHolder": "Your answer",
+          "conditions": { "1": "TypeScript" }
+        },
+        {
+          "questionId": 3,
+          "questionText": "What do you like about programming?",
+          "required": false,
+          "questionType": 1,
+          "multipleChoiceAnswers": [],
+          "textAnswerPlaceHolder": "Your answer",
+          "conditions": {}
+        },
+        {
+          "questionId": 4,
+          "questionText": "How was the assignment?",
+          "required": true,
+          "questionType": 0,
+          "multipleChoiceAnswers": [
+            { "id": "Easy", "title": "Easy", "type": 0 },
+            { "id": "Normal", "title": "Normal", "type": 0 },
+            { "id": "Hard", "title": "Hard", "type": 0 },
+            { "id": "Other", "title": "Other", "type": 1 }
+          ],
+          "textAnswerPlaceHolder": "",
+          "conditions": {}
+        }
+      ]
+    }
+  ]
+}
