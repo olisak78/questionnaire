@@ -51,8 +51,8 @@ export default function Home() {
     setVisible(true);
   };
 
-  // If the question should only show in case a certain answer was given to other questions,
-  // check that this condition is true. Feature from the BONUS part of the assignment.
+  // Function below checks conditions - In case the question is conditional, based on answer to other question (one or more).
+  // Feature from the BONUS part of the assignment.
   const checkConditions = (conditions: {
     [id: number]: string | undefined;
   }) => {
