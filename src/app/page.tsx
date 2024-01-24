@@ -5,8 +5,6 @@ import Card from './components/Card';
 import TitleCard from './components/TitleCard';
 import Notification from './components/Notification';
 import {
-  AnswerType,
-  QuestionType,
   formInput,
   notificationVisible,
   questionnaire,
@@ -15,58 +13,6 @@ import {
 import { useEffect } from 'react';
 import { getQuestionnaireById } from './fetchers/fetchQuestionnaire';
 
-// const questionnaire1 = {
-//   id: 1,
-//   title: 'GoTech Questionnaire',
-//   subtitle: 'Show me what you got!',
-//   questions: [
-//     {
-//       questionId: 1,
-//       questionText: 'What language is your favorite?',
-//       required: true,
-//       questionType: QuestionType.MultipleChoice,
-//       multipleChoiceAnswers: [
-//         { id: 'JavaScript', title: 'JavaScript', type: AnswerType.Choice },
-//         { id: 'TypeScript', title: 'TypeScript', type: AnswerType.Choice },
-//         { id: 'CoffeeScript', title: 'CoffeeScript', type: AnswerType.Choice },
-//       ],
-//       textAnswerPlaceHolder: '',
-//       conditions: {},
-//     },
-//     {
-//       questionId: 2,
-//       questionText: 'Why do you like TypeScript?',
-//       required: false,
-//       questionType: QuestionType.Text,
-//       multipleChoiceAnswers: [],
-//       textAnswerPlaceHolder: 'Your answer',
-//       conditions: { 1: 'TypeScript' },
-//     },
-//     {
-//       questionId: 3,
-//       questionText: 'What do you like about programming?',
-//       required: false,
-//       questionType: QuestionType.Text,
-//       multipleChoiceAnswers: [],
-//       textAnswerPlaceHolder: 'Your answer',
-//       conditions: {},
-//     },
-//     {
-//       questionId: 4,
-//       questionText: 'How was the assignment?',
-//       required: true,
-//       questionType: QuestionType.MultipleChoice,
-//       multipleChoiceAnswers: [
-//         { id: 'Easy', title: 'Easy', type: AnswerType.Choice },
-//         { id: 'Normal', title: 'Normal', type: AnswerType.Choice },
-//         { id: 'Hard', title: 'Hard', type: AnswerType.Choice },
-//         { id: 'Other', title: 'Other', type: AnswerType.ChoiceWithText },
-//       ],
-//       textAnswerPlaceHolder: '',
-//       conditions: {},
-//     },
-//   ],
-// };
 export default function Home() {
   const [input, setInput] = useAtom(formInput);
   const [visible, setVisible] = useAtom(notificationVisible);
@@ -105,7 +51,7 @@ export default function Home() {
     setVisible(true);
   };
 
-  // If the question should only show in case a certain answer was given to other question,
+  // If the question should only show in case a certain answer was given to other questions,
   // check that this condition is true. Feature from the BONUS part of the assignment.
   const checkConditions = (conditions: {
     [id: number]: string | undefined;
@@ -116,7 +62,7 @@ export default function Home() {
     });
     return result;
   };
-  console.log(questionnaireData);
+
   return (
     <form onSubmit={handleSubmit}>
       {visible && (

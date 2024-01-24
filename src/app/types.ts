@@ -33,8 +33,10 @@ export enum AnswerType {
   'ChoiceWithText',
 }
 
+// Atom definitions for handling the state variables
 export const formInput = atom({} as { [id: number]: string | undefined });
 export const notificationVisible = atom(false as boolean);
 export const questionnaire = atom(null as QuestionnaireData | null);
+
 export const questionnaireId = 1;
 export const port = 3000;
